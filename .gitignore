@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+tests/harness/device_harness
+tests/harness/*.dSYM/
+*.svg
+*.svg.png
+lora.app/
+.DS_Store

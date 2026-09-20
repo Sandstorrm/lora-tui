@@ -1,0 +1,102 @@
+/* Bruce LoRa remote -- true black, one light-blue accent. */
+Screen { background: #000000; color: #cfe0ec; }
+
+HeaderBar { dock: top; height: 1; background: #05090d; color: #cfe0ec; }
+
+#main { height: 1fr; padding: 0 0 0 0; }
+#left { width: 1fr; }
+#side { width: 44; }
+
+TerminalView {
+    height: 1fr;
+    background: #000000;
+    border: round #14212d;
+    border-title-color: #7dc8ff;
+    border-title-style: bold;
+    padding: 0 1;
+    scrollbar-size-vertical: 1;
+    scrollbar-background: #000000;
+    scrollbar-color: #1d3a50;
+    scrollbar-color-hover: #3b7ca8;
+    scrollbar-color-active: #7dc8ff;
+}
+TerminalView:focus-within { border: round #2a4a63; }
+
+ScreenView {
+    height: 1fr;
+    background: #000000;
+    border: round #14212d;
+    border-title-color: #7dc8ff;
+    border-title-style: bold;
+    padding: 0 1;
+}
+ScreenView:focus { border: round #7dc8ff; }
+
+RefreshSlider {
+    height: 4;
+    background: #000000;
+    border: round #14212d;
+    border-title-color: #7dc8ff;
+    border-title-style: bold;
+    padding: 0 1;
+}
+RefreshSlider:focus { border: round #7dc8ff; }
+
+CommandInput {
+    height: 3;
+    background: #000000;
+    color: #e8f3fb;
+    border: round #14212d;
+    padding: 0 1;
+}
+CommandInput:focus { border: round #7dc8ff; background: #02080c; }
+CommandInput > .input--placeholder { color: #34444f; }
+CommandInput > .input--cursor { background: #7dc8ff; color: #000000; }
+
+#packets {
+    height: 9;
+    background: #000000;
+    border: round #14212d;
+    border-title-color: #7dc8ff;
+    padding: 0 1;
+    scrollbar-size-vertical: 1;
+    scrollbar-color: #1d3a50;
+    scrollbar-background: #000000;
+}
+
+.panel {
+    background: #04070a;
+    border: round #14212d;
+    border-title-color: #7dc8ff;
+    border-title-style: bold;
+    padding: 0 0;
+    margin: 0 0 0 0;
+}
+.panel:focus { border: round #7dc8ff; }
+#signal  { height: 10; }
+#slider  { height: 11; }
+#power   { height: 5; }
+#nav     { height: 3; }
+#session { height: 1fr; min-height: 6; }
+
+Footer { background: #05090d; }
+Footer > .footer--key { color: #7dc8ff; background: #05090d; text-style: bold; }
+Footer > .footer--description { color: #6b8496; background: #05090d; }
+Footer > .footer--highlight { background: #0c1a26; }
+FooterKey { background: #05090d; }
+FooterKey .footer-key--key { color: #7dc8ff; background: #05090d; text-style: bold; }
+FooterKey .footer-key--description { color: #6b8496; background: #05090d; }
+
+HelpScreen { align: center middle; background: #000000 70%; }
+#help-box {
+    width: 74; height: auto; max-height: 90%;
+    background: #04070a; border: round #7dc8ff; border-title-color: #7dc8ff;
+    padding: 1 2;
+}
+
+Toast { background: #07121a; color: #cfe0ec; border-left: thick #7dc8ff; }
+Toast.-warning { border-left: thick #ffb454; }
+Toast.-error { border-left: thick #ff6b6b; }
+
+#nomod { height: auto; padding: 0 1; margin-bottom: 1; border: round $error; background: #1a0808; }
+#side.offline .panel { opacity: 45%; }
